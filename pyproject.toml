@@ -1,0 +1,27 @@
+[project]
+name = "quant-mcp-server"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "“yourname”", email = "gao0222@bu.edu" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "mcp[cli]>=1.27.0",
+    "numpy>=2.4.4",
+    "pandas>=3.0.2",
+]
+
+[project.scripts]
+quant-mcp-server = "quant_mcp_server.server:main"
+
+[build-system]
+requires = ["uv_build>=0.11.8,<0.12.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.0.3",
+    "ruff>=0.15.12",
+]
